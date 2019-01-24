@@ -2,7 +2,7 @@
 
 //	版本控制
 string nowVersion = "0.0.4";
-string versionInf = "The Original Version.";
+string versionInf = "将项目上传到GitHub";
 string discipline[10] = {
 	"Mathematics_数学", "Chinese_语文", "English_英语",
 	"Physics_物理", "Chemistry_化学", "biology_生物"
