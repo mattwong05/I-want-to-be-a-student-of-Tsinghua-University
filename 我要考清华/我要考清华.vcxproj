@@ -115,6 +115,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="countDown.cpp" />
+    <ClCompile Include="textColor.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Tsinghua.cpp" />
+    <ClCompile Include="欢乐颂.cpp" />
+    <ClCompile Include="送别BeepSound.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Data.csv" />
+    <Text Include="Log.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="functionTest.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="升级日志.csv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
