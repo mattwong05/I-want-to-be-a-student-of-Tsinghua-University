@@ -14,42 +14,4 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Tsinghua.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="送别BeepSound.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="欢乐颂.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="countDown.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Timer.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="textColor.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Data.csv">
-      <Filter>资源文件</Filter>
-    </Text>
-    <Text Include="Log.csv">
-      <Filter>资源文件</Filter>
-    </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="functionTest.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="升级日志.csv">
-      <Filter>资源文件</Filter>
-    </None>
-  </ItemGroup>
 </Project>
