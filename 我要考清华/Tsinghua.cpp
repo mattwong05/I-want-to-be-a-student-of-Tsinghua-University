@@ -118,7 +118,7 @@ int main(void)
 				system("cls");
 				//	“˝”√ÕÍ±œ
 
-				logData += printTime_t(consumeTime) + ',' + getTime_t();
+				logData += printTime_t(consumeTime) + ',' + getTime_t(1);
 				
 				saveFlag = true;
 				while (saveFlag) {

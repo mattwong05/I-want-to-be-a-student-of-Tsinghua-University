@@ -40,22 +40,33 @@ string printTime_t(double consumTime) {
 }
 
 
-//	getTime()	格式化输出时间
-void getTime(void)
+//	getTime_()	格式化输出时间 已弃用
+/*
+	在星期上出现问题！！！
+	2019/1/27 0:47
+*/
+void getTime_(void)
 {
 	SYSTEMTIME sys;
 	GetLocalTime(&sys);
-	printf("%4d/%02d/%02d\t星期%1d\t%02d:%02d:%02d\n", sys.wYear, sys.wMonth, sys.wDay, sys.wDayOfWeek, sys.wHour, sys.wMinute, sys.wSecond);
+	printf("%4d/%02d/%02d\t星期%d\t%02d:%02d:%02d\n", sys.wYear, sys.wMonth, sys.wDay, sys.wDayOfWeek, sys.wHour, sys.wMinute, sys.wSecond);
+	cout << sys.wDayOfWeek << endl;
+}
+
+void getTime(void)
+{
+	cout << getTime_t() << endl;
 }
 
 
-string getTime_t(void)
+string getTime_t(int x)
 {
-	SYSTEMTIME sys;
-	GetLocalTime(&sys);
-	stringstream ss;
-	string localTime;
-	ss << sys.wYear << "年" << sys.wMonth << "月" << sys.wDay << "日-" << sys.wHour<< "时"<< sys.wMinute << "分" << sys.wSecond << "秒";
-	ss >> localTime;
-	return localTime;
+	time_t rawtime;
+	struct tm timeinfo;
+	time(&rawtime);
+	localtime_s(&timeinfo, &rawtime);
+	char p[30];
+	x ? strftime(p, 30, "%F %T", &timeinfo) : strftime(p, 30, "%F %T %A", &timeinfo);
+	string nowTime = p;
+	return nowTime;
 }
