@@ -64,7 +64,7 @@ int main(void)
 					//	确认请求
 					changeColor(6);
 					cout << "请您确认您的请求，检查无误后我们就要开始啦!!!\n";
-					cout << "大分类:" << classifyName << "\t子分类:" << tagName << "\t学习内容" << contentName << endl;
+					cout << "大分类:" << classifyName << "\t子分类:" << tagName << "\t学习内容:" << contentName << endl;
 					changeColor();
 					contentCheckFlag = true;
 					while (contentCheckFlag)
@@ -143,7 +143,7 @@ int main(void)
 						case '0':
 							cout << "确认不保存吗？\t(1)后悔了\t(0)狠心不保存\n";
 							notSaveCheck = _getch();
-							if (notSaveCheck == '0')	saveCheck = false;
+							if (notSaveCheck == '0')	saveFlag = false;
 					}
 				}
 				break;
