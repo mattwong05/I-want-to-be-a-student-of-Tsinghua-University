@@ -6,9 +6,12 @@
 #include <conio.h>	//	getch();
 #include <Windows.h>
 using namespace std;
-void sendOff();
-void songOfJoy();
+void sendOff(void);
+void songOfJoy(void);
 void countDown(int hh, int mm, int ss = 0);
 void printTime(double consumeTime);
-void getTime();
+string printTime_t(double consumeTime);
+void getTime(void);
+string getTime_t(void);
 void changeColor(int word = 7, int background = 0);
+void addLog(string logData);

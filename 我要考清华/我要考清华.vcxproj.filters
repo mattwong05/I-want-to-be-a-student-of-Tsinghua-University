@@ -33,6 +33,9 @@
     <ClCompile Include="textColor.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="fileoperation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Data.csv">
