@@ -1,8 +1,9 @@
 #include "functionTest.h"
+//using namespace std;	//	虽然我在function.h中包含了 using namespace std 但是有时候还是会报错
 
 //	版本控制
-string nowVersion = "0.0.5";
-string versionInf = "完成时间记录的内容";
+string nowVersion = "0.0.6";
+string versionInf = "修复一些已知错误";
 
 
 //	主程序所需命名
@@ -38,12 +39,12 @@ int main(void)
 	system("title 我要考清华!!!");
 	getTime();
 	cout << "Where there is a will, there is a way!\t有志者，事竟成！\n";
-	cout << "Now version is " << nowVersion << "\n\n\n";
+	cout << "Now version is " << nowVersion << "\t" << versionInf <<"\n\n\n";
 
 	while (mainFlag)
 	{
 		system("title 我要考清华!!!");
-		cout << "请输入数字：(1)记录时间 (2)查询记录_comming_soon (3)分析结果_comming_soon (5)计时器 (6)倒计时 (0)退出程序\n";
+		cout << "请输入数字：(1)记录时间 (2)查询记录_即将推出 (3)分析结果_即将推出 (5)计时器 (6)倒计时 (0)退出程序\n";
 		mainControler = _getch();
 		switch (mainControler) {
 			case '1':
@@ -138,7 +139,9 @@ int main(void)
 								logData += ',' + others;
 							}
 							addLog(logData);
-							cout << "保存成功！" << endl;
+							
+							//cout << "保存成功！" << endl;
+							
 							break;
 						case '0':
 							cout << "确认不保存吗？\t(1)后悔了\t(0)狠心不保存\n";
