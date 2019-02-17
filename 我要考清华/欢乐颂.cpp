@@ -15,7 +15,6 @@ a--	表示音高，其值为1(低音)、2(中音)、3(高音)
 
 void Play(int f, int a, int t)
 {
-	int i = 0;
 	Beep((unsigned)(f*a), t*PER);
 }
 
@@ -52,4 +51,24 @@ void songOfJoy(void)
 
 	/*第四节:2 1 1 -*/
 	Play(Re, 2, 3); Play(Do, 2, 1); Play(Do, 2, 4);
+}
+
+void peppaPig(void) {
+	Play(So, 2, 2); Play(Mi, 2, 1); Play(Do, 2, 1); Play(Re, 2, 2); Play(So, 1, 2);
+	Play(So, 1, 1); Play(Xi, 1, 1); Play(Re, 2, 1); Play(Fa, 2, 1); Play(Mi, 2, 2); Play(Do, 2, 2);
+}
+
+void familyWithChildren(void) {
+	Play(Mi, 2, 2); Play(So, 2, 2); Play(Mi, 2, 2); Play(Do, 2, 2); Play(Re, 2, 4);
+	Play(Do, 2, 2); Play(Mi, 2, 2); Play(Do, 2, 2); Play(La, 1, 2); Play(Xi, 1, 4);
+	Play(La, 1, 2); Play(Fa, 1, 2); Play(La, 1, 2); Play(Xi, 1, 2);
+	Play(Do, 2, 2); Play(So, 1, 2); Play(Do, 2, 2); Play(Mi, 2, 2);
+	Play(Fa, 2, 2); Play(Mi, 2, 2); Play(Re, 2, 2); Play(Do, 2, 2);
+	Play(Mi, 2, 4); Play(Re, 2, 4);
+
+	Play(Mi, 2, 2); Play(So, 2, 2); Play(Mi, 2, 2); Play(Do, 2, 2); Play(Re, 2, 4);
+	Play(Do, 2, 2); Play(Mi, 2, 2); Play(Do, 2, 2); Play(La, 1, 2); Play(Xi, 1, 4);
+	Play(La, 1, 2); Play(Fa, 1, 2); Play(La, 1, 2); Play(Xi, 1, 2);
+	Play(Do, 2, 2); Play(So, 1, 2); Play(Do, 2, 2); Play(Mi, 2, 2);
+	Play(Fa, 2, 2); Play(Mi, 2, 2); Play(Re, 2, 1); Play(Mi, 2, 1); Play(Re, 2, 1); Play(Do, 2, 1); Play(Do, 2, 4);
 }

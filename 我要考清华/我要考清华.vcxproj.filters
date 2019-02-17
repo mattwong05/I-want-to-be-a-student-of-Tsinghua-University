@@ -24,9 +24,6 @@
     <ClCompile Include="欢乐颂.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="countDown.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Timer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -34,6 +31,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="fileoperation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="eventAdd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeIt.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -48,6 +51,9 @@
   <ItemGroup>
     <ClInclude Include="functionTest.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeIt.h">
+      <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

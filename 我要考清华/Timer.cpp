@@ -39,34 +39,3 @@ string printTime_t(double consumTime) {
 	return timeBuf;
 }
 
-
-//	getTime_()	格式化输出时间 已弃用
-/*
-	在星期上出现问题！！！
-	2019/1/27 0:47
-*/
-void getTime_(void)
-{
-	SYSTEMTIME sys;
-	GetLocalTime(&sys);
-	printf("%4d/%02d/%02d\t星期%d\t%02d:%02d:%02d\n", sys.wYear, sys.wMonth, sys.wDay, sys.wDayOfWeek, sys.wHour, sys.wMinute, sys.wSecond);
-	cout << sys.wDayOfWeek << endl;
-}
-
-void getTime(void)
-{
-	cout << getTime_t() << endl;
-}
-
-
-string getTime_t(int x)
-{
-	time_t rawtime;
-	struct tm timeinfo;
-	time(&rawtime);
-	localtime_s(&timeinfo, &rawtime);
-	char p[30];
-	x ? strftime(p, 30, "%F %T", &timeinfo) : strftime(p, 30, "%F %T %A", &timeinfo);
-	string nowTime = p;
-	return nowTime;
-}
