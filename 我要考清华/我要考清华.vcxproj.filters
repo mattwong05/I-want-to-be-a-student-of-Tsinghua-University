@@ -24,19 +24,19 @@
     <ClCompile Include="欢乐颂.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Timer.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="textColor.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="fileoperation.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="eventAdd.cpp">
+    <ClCompile Include="TimeIt.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="TimeIt.cpp">
+    <ClCompile Include="contentEnter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="insertLog.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

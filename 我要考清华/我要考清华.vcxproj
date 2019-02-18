@@ -115,11 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="eventAdd.cpp" />
+    <ClCompile Include="contentEnter.cpp" />
     <ClCompile Include="fileoperation.cpp" />
+    <ClCompile Include="insertLog.cpp" />
     <ClCompile Include="textColor.cpp" />
     <ClCompile Include="TimeIt.cpp" />
-    <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Tsinghua.cpp" />
     <ClCompile Include="欢乐颂.cpp" />
     <ClCompile Include="送别BeepSound.cpp" />

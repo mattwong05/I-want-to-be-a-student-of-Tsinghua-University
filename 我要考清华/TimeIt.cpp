@@ -1,5 +1,7 @@
 #include "functionTest.h"
 #include "TimeIt.h"
+#include <sstream>
+#include <iomanip>
 
 void TimeIt::getTime(void) {
 	char dayOfWeek[7][4] {
@@ -10,15 +12,18 @@ void TimeIt::getTime(void) {
 	printf("%4d/%02d/%02d 星期%s %02d:%02d:%02d\n", sys.wYear, sys.wMonth, sys.wDay, dayOfWeek[sys.wDayOfWeek], sys.wHour, sys.wMinute, sys.wSecond);
 }
 
-string TimeIt::getTime_t(int x) {
-	time_t rawtime;
-	struct tm timeinfo;
-	time(&rawtime);
-	localtime_s(&timeinfo, &rawtime);
-	char p[30];
-	x ? strftime(p, 30, "%F %T", &timeinfo) : strftime(p, 30, "%F %T %A", &timeinfo);
-	string nowTime = p;
-	return nowTime;
+string TimeIt::getTime_t(void) {
+	stringstream ss;
+	string getTimeIt;
+	SYSTEMTIME sys;
+	GetLocalTime(&sys);
+	ss << setw(4) <<sys.wYear << '/' << setw(2) << setfill('0') <<sys.wMonth << '/' 
+		<< setw(2) << setfill('0') << sys.wDay << '-' 
+		<< setw(2) << setfill('0') << sys.wHour << ':' 
+		<< setw(2) << setfill('0') << sys.wMinute << ':' 
+		<< setw(2) << setfill('0') << sys.wSecond;
+	ss >> getTimeIt;
+	return getTimeIt;
 }
 
 void TimeIt::countDown(void) {
@@ -49,24 +54,27 @@ void TimeIt::pause(void) {
 
 void TimeIt::stop(void) {
 	system("cls");
-	show();
 	timerFlag = false;
-	reset();
 }
 
-void TimeIt::show(void) {
+string TimeIt::show(void) {
+	stringstream ss;
+	string consumeTimePrint;
 	if (consumeTime >= 3600) {
-		cout << consumeTime / 3600 << "小时";
+		ss << consumeTime / 3600 << "小时";
 		consumeTime %= 3600;
 	}
 	if (consumeTime >= 60) {
-		cout << consumeTime / 60 << "分钟";
+		ss << consumeTime / 60 << "分钟";
 		consumeTime %= 60;
 	}
-	cout << consumeTime << "秒" << endl;
+	ss << consumeTime << "秒";
+	ss >> consumeTimePrint;
+	cout << consumeTimePrint << endl;
+	return consumeTimePrint;
 }
 
-void TimeIt::Timer(void) {
+string TimeIt::Timer(void) {
 	reset();
 	system("title 计时器");
 	timerFlag = true;
@@ -83,7 +91,33 @@ void TimeIt::Timer(void) {
 		pause();
 		cout << "停止请按0，其余按键继续\n";
 		char timerControler = _getch();
-		timerControler == '0' ? stop() : start();
+		if (timerControler == '0') {
+			stop();
+			return show();
+		}
+		else {
+			start();
+		}
 	}
 	_getch();
+	return "";
+}
+
+
+string TimeIt::toStd(int year, int month, int day, int hour, int minute, int second) {
+	stringstream ss;
+	string stdTime;
+	ss << setw(4) << year << '/' 
+		<< setw(2) << setfill('0') << month << '/'
+		<< setw(2) << setfill('0') << day << '-'
+		<< setw(2) << setfill('0') << hour << ':'
+		<< setw(2) << setfill('0') << minute << ':'
+		<< setw(2) << setfill('0') << second;
+	ss >> stdTime;
+	return stdTime;
+}
+
+string TimeIt::stdSubtract(string a, string b)
+{
+	return string();
 }

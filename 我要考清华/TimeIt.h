@@ -9,12 +9,14 @@ private:
 
 public:
 	void getTime(void);
-	string getTime_t(int x = 0);
+	string getTime_t(void);
 	void reset(void);
 	void start(void);
 	void pause(void);
 	void stop(void);
-	void show(void);
+	string show(void);
 	void countDown(void);
-	void Timer(void);
+	string Timer(void);
+	string toStd(int year, int month, int day, int hour, int minute, int second);
+	string stdSubtract(string a, string b);
 };
