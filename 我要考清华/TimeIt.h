@@ -19,4 +19,5 @@ public:
 	string Timer(void);
 	string toStd(int year, int month, int day, int hour, int minute, int second);
 	string stdSubtract(string a, string b);
+	string TimeSub(int h1, int m1, int s1, int h2, int m2, int s2);
 };

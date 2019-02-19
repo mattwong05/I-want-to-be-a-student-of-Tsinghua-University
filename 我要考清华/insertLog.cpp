@@ -4,7 +4,7 @@
 void insertLog(void) {
 	TimeIt timeIt;
 	int year, month, day, beginHour, beginMin, beginSec, finishHour, finishMin, finishSec;
-	string beginTime, finishTime, spendTime;
+	string beginTime, finishTime, spendTime, others;
 	char insertCheck;
 
 	cout << "现在是插入模式！\n";
@@ -27,7 +27,13 @@ INSERTCHECK:
 	insertCheck = _getch();
 	switch (insertCheck) {
 	case '1':
-		
+		spendTime = timeIt.stdSubtract(finishTime, beginTime);
+		if (spendTime == "Error") return;
+		log += beginTime + ',' + finishTime + ',' + spendTime + ',';
+		cout << "请留下备注:";
+		cin >> others;
+		log += others;
+		addLog(log);
 		break;
 	case '0':
 		return insertLog();

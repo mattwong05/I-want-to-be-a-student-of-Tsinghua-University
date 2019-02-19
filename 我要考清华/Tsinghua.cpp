@@ -3,14 +3,13 @@
 //using namespace std;	//	虽然我在function.h中包含了 using namespace std 但是有时候还是会报错
 
 //	版本控制
-string versionInf = "0.0.9,补充了时间类，完成之前主体的重构，新增了一个插入事件的功能(未完成),2019/02/18";
+string versionInf = "0.1.0,完成时间类的改装，完成插入功能,2019/02/19";
 
 
 //	主程序所需命名
 bool mainFlag = true;	
 char mainControler;
 
-string spendTime;
 
 int main(void)
 {
@@ -49,8 +48,7 @@ int main(void)
 
 			case '8':
 				//	计时器
-				spendTime = timeIt.Timer();
-				cout << spendTime << endl;
+				timeIt.Timer();
 				break;
 
 			case '9':

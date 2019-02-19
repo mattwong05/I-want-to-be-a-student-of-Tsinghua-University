@@ -119,5 +119,46 @@ string TimeIt::toStd(int year, int month, int day, int hour, int minute, int sec
 
 string TimeIt::stdSubtract(string a, string b)
 {
+	int yearA, yearB, monthA, monthB, dayA, dayB, hourA, hourB, minA, minB, secA, secB;
+	char buf;
+	stringstream ss;
+	ss << a;
+	ss >> yearA >> buf >> monthA >> buf >> dayA >> buf >> hourA >> buf >> minA >> buf >> secA;
+	ss.clear();
+	ss << b;
+	ss >> yearB >> buf >> monthB >> buf >> dayB >> buf >> hourB >> buf >> minB >> buf >> secB;
+	//printf("%d/%d/%d %d:%d:%d\n", yearA, monthA, dayA, hourA, minA, secA);
+	//printf("%d/%d/%d %d:%d:%d\n", yearB, monthB, dayB, hourB, minB, secB);
+	if (yearA == yearB && monthA == monthB && dayA == dayB) {
+		return TimeSub(hourA, minA, secA, hourB, minB, secB);
+	}
+	//	其实并没有机会运行到这，哈哈
+	cout << "暂未支持不在同一天的时间计算！！！\n";
 	return string();
+}
+
+string TimeIt::TimeSub(int h1, int m1, int s1, int h2, int m2, int s2) {
+	int sec, min, hour;
+	string spendTime;
+	stringstream ss;
+	if (h1 > h2 || (h1 == h2 && m1 > m2) || (h1 == h2 && m1 == m2 && s1 > s2)) {
+		s1 >= s2 ? sec = s1 - s2 : (sec = s1 + 60 - s2, m1--);
+		m1 >= m2 ? min = m1 - m2 : (min = m1 + 60 - m2, h1--);
+		hour = h1 - h2;
+		if (hour) {
+			ss << hour << "小时" << min << "分钟" << sec << "秒";
+		}
+		else if (min) {
+			ss << min << "分钟" << sec << "秒";
+		}
+		else {
+			ss << sec << "秒";
+		}
+		ss >> spendTime;
+		return spendTime;
+	}
+	else {
+		cout << "错误的时间，相减为负数！！！\n";
+		return "Error";
+	}
 }

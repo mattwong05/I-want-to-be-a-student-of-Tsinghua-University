@@ -24,7 +24,7 @@ CONTENTCHECK:
 	contentCheck = _getch();
 	switch (contentCheck) {
 	case '1':
-		log = classifyName + ',' + tagName + ',' + contentName + ',' + nowTime.getTime_t() + ',';
+		log = classifyName + ',' + tagName + ',' + contentName + ',';
 		return log;
 		break;
 	case '0':
@@ -43,7 +43,7 @@ void contentEnter(void) {
 	string log, spendTime, others;
 	char saveCheck;
 	
-	log = contentEnter_sub();
+	log = contentEnter_sub() + nowTime.getTime_t() + ',';
 
 	spendTime = nowTime.Timer();
 	log += nowTime.getTime_t() + ',' + spendTime + ',';
