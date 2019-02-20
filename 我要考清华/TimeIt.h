@@ -4,7 +4,8 @@
 class TimeIt {
 private:
 	clock_t begin, finish;
-	int consumeTime, consumeTime_buf;
+	int consumeTime;
+	double consumeTime_buf;
 	bool timerFlag;
 
 public:

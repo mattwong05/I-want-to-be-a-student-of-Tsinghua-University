@@ -3,7 +3,7 @@
 //using namespace std;	//	虽然我在function.h中包含了 using namespace std 但是有时候还是会报错
 
 //	版本控制
-string versionInf = "0.1.0,完成时间类的改装，完成插入功能,2019/02/19";
+string versionInf = "0.1.1,修补了在0.1.0中出现的show()函数刷新导致的记录时间的总时间出现问题,2019/02/20";
 
 
 //	主程序所需命名

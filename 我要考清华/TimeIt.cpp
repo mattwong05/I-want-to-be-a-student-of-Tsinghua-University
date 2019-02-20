@@ -38,7 +38,7 @@ void TimeIt::countDown(void) {
 }
 
 void TimeIt::reset(void) {
-	consumeTime = consumeTime_buf = 0;
+	consumeTime_buf = consumeTime = 0;
 }
 
 void TimeIt::start(void) {
@@ -47,8 +47,8 @@ void TimeIt::start(void) {
 
 void TimeIt::pause(void) {
 	finish = clock();
-	consumeTime_buf = (int)(finish - begin) / CLOCKS_PER_SEC;
-	consumeTime += consumeTime_buf;
+	consumeTime_buf = (double)(finish - begin) / CLOCKS_PER_SEC;
+	consumeTime += int(consumeTime_buf+0.5) ;
 	show();
 }
 
@@ -62,13 +62,11 @@ string TimeIt::show(void) {
 	string consumeTimePrint;
 	if (consumeTime >= 3600) {
 		ss << consumeTime / 3600 << "小时";
-		consumeTime %= 3600;
 	}
 	if (consumeTime >= 60) {
-		ss << consumeTime / 60 << "分钟";
-		consumeTime %= 60;
+		ss << consumeTime % 3600 / 60 << "分钟";
 	}
-	ss << consumeTime << "秒";
+	ss << consumeTime % 60 << "秒";
 	ss >> consumeTimePrint;
 	cout << consumeTimePrint << endl;
 	return consumeTimePrint;

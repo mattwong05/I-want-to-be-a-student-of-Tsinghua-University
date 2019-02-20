@@ -32,7 +32,7 @@ INSERTCHECK:
 		log += beginTime + ',' + finishTime + ',' + spendTime + ',';
 		cout << "«Î¡Ùœ¬±∏◊¢:";
 		cin >> others;
-		log += others;
+		log += others + ',' + timeIt.getTime_t() + "≤Â»Î";
 		addLog(log);
 		break;
 	case '0':

@@ -4,7 +4,6 @@
 
 
 string contentEnter_sub(void) {
-	TimeIt nowTime;
 	string log, classifyName, tagName, contentName;
 	char contentCheck;
 	cout << "欢迎记录你的时间！\n请输入你即将进行的内容的大分类:";
