@@ -7,7 +7,7 @@ string versionInf = "0.1.1,修补了在0.1.0中出现的show()函数刷新导致的记录时间的总
 
 
 //	主程序所需命名
-bool mainFlag = true;	
+bool mainFlag = true;
 char mainControler;
 
 
@@ -17,8 +17,8 @@ int main(void)
 	TimeIt timeIt;
 	timeIt.getTime();
 	cout << timeIt.getTime_t();
-	cout << "Where there is a will, there is a way!\t有志者，事竟成！\n";
-	cout << "Now version is "  << versionInf <<"\n\n\n";
+	cout << "\nWhere there is a will, there is a way!\t有志者，事竟成！\n";
+	cout << "Now version is " << versionInf << "\n\n\n";
 
 	while (mainFlag)
 	{
@@ -26,49 +26,49 @@ int main(void)
 		cout << "请输入数字：(1)记录时间 (2)插入记录 (3)查询记录_即将推出 (4)分析结果_即将推出 (8)计时器 (9)倒计时 (0)退出程序\n";
 		mainControler = _getch();
 		switch (mainControler) {
-			case '1':
-				//	时间记录
-				contentEnter();
-				break;
+		case '1':
+			//	时间记录
+			contentEnter();
+			break;
 
-			case '2':
-				//	插入记录
-				insertLog();
-				break;
+		case '2':
+			//	插入记录
+			insertLog();
+			break;
 
-			case '3':
-				//	查询时间_待补充
+		case '3':
+			//	查询时间_待补充
 
-				break;
+			break;
 
-			case '4':
-				//	分析时间_待补充
-				
-				break;
+		case '4':
+			//	分析时间_待补充
 
-			case '8':
-				//	计时器
-				timeIt.Timer();
-				break;
+			break;
 
-			case '9':
-				//	倒计时
-				timeIt.countDown();
-				break;
+		case '8':
+			//	计时器
+			timeIt.Timer();
+			break;
 
-			case '7':
-				//	彩蛋
-				familyWithChildren();
-				break;
+		case '9':
+			//	倒计时
+			timeIt.countDown();
+			break;
 
-			case '0':
-				//	退出程序
-				mainFlag = false;
-				break;
+		case '7':
+			//	彩蛋
+			familyWithChildren();
+			break;
 
-			default:
-				cout << "Wrong Key! Please Try Again!\n";
-				break;
+		case '0':
+			//	退出程序
+			mainFlag = false;
+			break;
+
+		default:
+			cout << "Wrong Key! Please Try Again!\n";
+			break;
 		}
 	}
 	cout << "Good Bye! Tsinghua University is waiting for the man who is hardworking!\n";
