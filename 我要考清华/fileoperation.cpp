@@ -34,4 +34,5 @@ void addLog(string logData)
 	}
 	fstream log(logPath.c_str(), ios::app);
 	log.good() ? log << logData << endl, cout << "From addLog : Save Log Successful!" << endl : cerr << "failed Open the file!\n";
+	log.close();
 }
