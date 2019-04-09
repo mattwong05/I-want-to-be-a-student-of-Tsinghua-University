@@ -22,6 +22,9 @@ void addLog(string logData);
 void contentEnter(void);
 string contentEnter_sub(void);
 void insertLog(void);
+void insertMood(void);
+void makeWorkPath(void);
+string getWorkPath(void);
 
 enum color {
 	黑色, 深蓝色, 深绿色, 深青色,深红色, 深粉色, 深黄色, 深白色,

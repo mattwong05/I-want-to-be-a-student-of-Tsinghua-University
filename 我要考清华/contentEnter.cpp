@@ -48,7 +48,7 @@ void contentEnter(void) {
 	log += nowTime.getTime_t() + ',' + spendTime + ',';
 
 SAVECHECK:
-	changeColor(深红色, 深黄色);
+	changeColor(深红色, 浅黄色);
 	cout << log << endl;
 	changeColor();
 

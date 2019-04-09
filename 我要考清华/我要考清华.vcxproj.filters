@@ -39,6 +39,9 @@
     <ClCompile Include="insertLog.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="insertMood.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Data.csv">
@@ -73,7 +76,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\Download\timeManage.ico">
+    <Image Include="timeManager.ico">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

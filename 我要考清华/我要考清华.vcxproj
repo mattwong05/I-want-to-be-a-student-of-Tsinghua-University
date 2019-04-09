@@ -118,6 +118,7 @@
     <ClCompile Include="contentEnter.cpp" />
     <ClCompile Include="fileoperation.cpp" />
     <ClCompile Include="insertLog.cpp" />
+    <ClCompile Include="insertMood.cpp" />
     <ClCompile Include="textColor.cpp" />
     <ClCompile Include="TimeIt.cpp" />
     <ClCompile Include="Tsinghua.cpp" />
@@ -141,7 +142,7 @@
     <ResourceCompile Include="我要考清华.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\..\Download\timeManage.ico" />
+    <Image Include="timeManager.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
