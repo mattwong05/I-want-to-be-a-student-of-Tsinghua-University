@@ -1,13 +1,13 @@
+#pragma once
+#include <conio.h>	//	getch();
+#include <Windows.h>
+#include <ctime>
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
+#include <vector>
+#include <map>
 #include <string>
-#include <ctime>
-#include <conio.h>	//	getch();
-#include <Windows.h>
-
-
-using namespace std;
 
 
 void sendOff(void);
@@ -18,13 +18,13 @@ void familyWithChildren(void);
 
 void changeColor(int word = 7, int background = 0);
 
-void addLog(string logData);
+void addLog(std::string logData);
 void contentEnter(void);
-string contentEnter_sub(void);
+std::string contentEnter_sub(void);
 void insertLog(void);
 void insertMood(void);
 void makeWorkPath(void);
-string getWorkPath(void);
+std::string getWorkPath(int flag = 0);
 
 enum color {
 	黑色, 深蓝色, 深绿色, 深青色,深红色, 深粉色, 深黄色, 深白色,

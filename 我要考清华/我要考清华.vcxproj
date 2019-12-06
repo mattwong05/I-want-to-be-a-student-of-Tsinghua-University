@@ -116,6 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="contentEnter.cpp" />
+    <ClCompile Include="Event_V2.cpp" />
     <ClCompile Include="fileoperation.cpp" />
     <ClCompile Include="insertLog.cpp" />
     <ClCompile Include="insertMood.cpp" />
@@ -130,16 +131,13 @@
     <Text Include="Log.csv" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Event_V2.h" />
     <ClInclude Include="functionTest.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="TimeIt.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="logV0.0.5.csv" />
     <None Include="升级日志.csv" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="我要考清华.rc" />
+    <None Include="我要考清华\EventTree.dat" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="timeManager.ico" />

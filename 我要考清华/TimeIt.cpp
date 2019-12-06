@@ -2,6 +2,8 @@
 #include "TimeIt.h"
 #include <sstream>
 #include <iomanip>
+using namespace std;
+
 
 void TimeIt::getTime(void) {
 	char dayOfWeek[7][4] {
@@ -36,6 +38,19 @@ void TimeIt::countDown(void) {
 	cout << "时间到！！！" << endl;
 	countDownHH > 0 || countDownMM >= 1 ? songOfJoy() : familyWithChildren();
 }
+
+
+void TimeIt::newCountDown(void) {
+	/*
+		思路：
+			do{
+				获取当前时间，
+				计算当前时间和目标时间的差值，
+				显示当前剩余时间，
+			}while（当前时间小于目标时间）
+	*/
+}
+
 
 void TimeIt::reset(void) {
 	consumeTime_buf = consumeTime = 0;

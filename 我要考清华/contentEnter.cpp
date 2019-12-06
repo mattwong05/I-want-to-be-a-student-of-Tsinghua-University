@@ -1,6 +1,7 @@
 #include "functionTest.h"
 #include "TimeIt.h"
 #include <sstream>
+using namespace std;
 
 
 string contentEnter_sub(void) {

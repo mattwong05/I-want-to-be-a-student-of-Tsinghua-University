@@ -42,6 +42,9 @@
     <ClCompile Include="insertMood.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Event_V2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Data.csv">
@@ -58,7 +61,7 @@
     <ClInclude Include="TimeIt.h">
       <Filter>源文件</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="Event_V2.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -66,14 +69,9 @@
     <None Include="升级日志.csv">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="logV0.0.5.csv">
+    <None Include="我要考清华\EventTree.dat">
       <Filter>资源文件</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="我要考清华.rc">
-      <Filter>资源文件</Filter>
-    </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="timeManager.ico">

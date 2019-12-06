@@ -1,5 +1,7 @@
 #include "functionTest.h"
 #include "TimeIt.h"
+using namespace std;
+
 
 void insertLog(void) {
 	TimeIt timeIt;
